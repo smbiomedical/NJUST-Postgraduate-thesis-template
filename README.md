@@ -1,30 +1,24 @@
-# NJUST-Thesis-Template
 
+# NJUST-Thesis-Template
 A LaTeX thesis template for Nanjing University of Science & Technology
 
-南京理工大学学位论文Latex模板（硕博）
+It is an updated template, an adaptation of a Chinese thesis to an English version. The necessary adjustments are made for a ready-to-use English thesis for the NJUST postgraduate thesis.
 
-由于现有的Latex模板年久失修，且不适配Overleaf等在线写作平台。本模板的希望能做到为广大校友提供一个写作方式新选择。
-由于作者能力有限，欢迎P/R。本模板会一直保持维护状态。
+**Nanjing University of Science & Technology Thesis LaTeX Template (Master's & Doctoral)**
 
-## 已测试编译环境
+Due to existing LaTeX templates being outdated and incompatible with online writing platforms like Overleaf, this template aims to provide alumni with a new writing option. Given the author's limited capabilities, Pull Requests are welcome. This template will be continuously maintained.
 
+## Tested Compilation Environments
 1. Overleaf + XeLaTeX ✅
-2. Windows + TeX live 2023 + XeLaTeX ✅
+2. Windows + TeX Live 2023 + XeLaTeX ✅
 
-## 注意事项
+## Important Notes
+1. This template is extremely Overleaf-friendly. When compiling, you need to set the compiler to XeLaTeX.
 
-1. 本模板对Overleaf极为友好，编译时需要将compiler设置为XeLaTeX。
-2. 如果出现 `Package fontspec Warning: Font "FandolSong-Regular" does not contain requested Script "CJK"`的类似警告，需要手动指定当前操作系统中的CTeX默认字库（如Linux或Overleaf）。例如，在 `njusttt.cls`中设置 `fontset=ubuntu或windows`：
+2. If you encounter warnings like `Package fontspec Warning: Font "FandolSong-Regular" does not contain requested Script "CJK"`, you need to manually specify the CTeX default font library for your current operating system (such as Linux or Overleaf). For example, set `fontset=ubuntu` or `windows` in `njusttt.cls`:
    ```
    \LoadClass[a4paper,zihao=-4,UTF8,fontset=ubuntu]{ctexbook}
    ```
+   Under normal circumstances, this warning does not affect the generated output and can be directly ignored.
 
-   正常情况下，该警告不影响生成效果，可以直接忽略。
-3. 在TeX live环境下，可能会遇到\bibliography报错的情况，需要把编译链中的bibtex换成biber，具体可参考[Issue#1](https://github.com/pasteller/njusttt/issues/2#issue-2511395379)。
-
-## 致谢
-
-本模板修改自前人的成果，包括但不限于：
-
-1. njustThesis：https://github.com/jiec827/njustThesis
+3. In TeX Live environments, you may encounter \bibliography errors. You need to replace bibtex with biber in the compilation chain. For details, refer to [Issue#1](https://github.com/pasteller/njusttt/issues/2#issue-2511395379).
